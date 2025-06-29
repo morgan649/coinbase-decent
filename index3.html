@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Coinbase Help Center</title>
+  <style>
+    :root {
+      --blue: #0052ff;
+      --white: #ffffff;
+      --light: #f5f7fa;
+      --gray: #cbd5e1;
+      --dark: #1e293b;
+      --accent: #22c55e;
+    }
+
+    html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--white);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    .top-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: var(--accent);
+      color: white;
+      padding: 10px 15px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 16px;
+      z-index: 1000;
+    }
+
+    .top-bar a {
+      color: #ffffff;
+      text-decoration: underline;
+      margin-left: 5px;
+    }
+
+    header {
+      background: var(--blue);
+      padding: 4.5rem 0 3rem;
+    }
+
+    .header-content {
+      text-align: center;
+    }
+
+    header h1 {
+      color: var(--white);
+      font-size: 2.8rem;
+      font-weight: 300;
+      letter-spacing: -0.5px;
+    }
+
+    main {
+      padding: 1rem 0;
+        flex: 1;
+
+    }
+
+    .welcome-section {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .welcome-section h2 {
+      font-size: 2.2rem;
+      color: var(--dark);
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+
+    .welcome-section p {
+      font-size: 1.2rem;
+      color: #64748b;
+      font-weight: 300;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .service-card {
+      background: var(--white);
+      padding: 2rem 1.5rem;
+      border: 1px solid #bfdbfe; /* Light blue border */
+      border-left: 4px solid var(--blue); /* Accent border */
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+    }
+
+    .service-card:hover {
+      border-color: var(--blue);
+      box-shadow: 0 10px 25px rgba(0,82,255,0.08);
+      transform: translateY(-3px);
+    }
+
+    .service-card h3 {
+      font-size: 1.3rem;
+      color: var(--dark);
+      margin-bottom: 0.8rem;
+      font-weight: 600;
+    }
+
+    .service-card p {
+      color: #64748b;
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    footer {
+      background: var(--light);
+      padding: 2rem 0;
+      margin-top: 2rem;
+    }
+
+    .footer-content {
+      text-align: center;
+      color: #64748b;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      .welcome-section h2 {
+        font-size: 1.8rem;
+      }
+
+      .welcome-section p {
+        font-size: 1.1rem;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.9rem;
+      }
+
+      .welcome-section h2 {
+        font-size: 1.6rem;
+      }
+
+      .service-card {
+        padding: 1.8rem 1.2rem;
+      }
+    }
+
+    .call-now-section {
+  text-align: center;
+  margin: 2rem 2rem;
+}
+    .call-now-below-section {
+  text-align: center;
+  /* margin: 2rem 2rem; */
+}
+
+.call-now-btn {
+  display: inline-block;
+  background-color: #0052ff; /* Adjust as per your theme */
+  color: #fff;
+  padding: 0.5rem 2rem;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.call-now-btn:hover {
+  background-color: #003bbd;
+}
+
+      .call-now-wrapper {
+    display: flex;
+    gap: 20px; /* spacing between buttons */
+    flex-wrap: wrap; /* wrap on smaller screens */
+    justify-content: center; /* center align */
+    margin-top: 20px;
+  }
+
+
+  </style>
+</head>
+<body>
+  <!-- <div class="top-bar">
+    Talk to us - <a href="tel:+1-866-450-7470">+1-866-450-7470</a>
+  </div> -->
+
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <h1 style="margin-top:11px;">
+          Coinbase
+           Help Center</h1>
+      </div>
+    </div>
+  </header>
+
+ <main>
+  <div class="container">
+    <section class="welcome-section">
+      <h2>Your Help, Simplified</h2>
+      <p>Access our range of support services to get the assistance you need—quick, reliable, and stress-free.</p>
+    </section>
+
+<section class="call-now-wrapper" style="margin-bottom: 10px;">
+  <a href="#" class="call-now-btn">Talk to us</a>
+  <a href="#" class="call-now-btn">Submit a Ticket</a>
+</section>
+<!-- ////////////////////////////////FOR Safe OCNTENT -->
+
+
+    <!-- <section class="services-grid" >
+      <div class="service-card">
+        <h3>24/7 Assistance</h3>
+        <p>Reach out to us anytime—day or night—for immediate assistance with your questions or concerns.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Skilled Team</h3>
+        <p>Our experienced team is committed to providing precise and effective solutions with care and professionalism.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Swift Resolutions</h3>
+        <p>We focus on fast, efficient problem-solving so you can stay on track without interruptions.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>All-in-One Help</h3>
+        <p>From technical issues to general queries, we’re here with answers that meet all your support needs.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Data Protection</h3>
+        <p>Your privacy is our priority. We handle your data with the highest level of confidentiality and care.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Get in Touch</h3>
+        <p>Don’t wait—reach out today and experience the dedicated support you deserve. We’re just a click away.</p>
+      </div>
+    </section> -->
+
+
+<!-- ////////////////////////////////FOR MONEY OCNTENT -->
+
+<!--       <section class="services-grid">
+      <div class="service-card">
+        <h3>Trouble Logging In?</h3>
+          <p>Reset your login credentials and get back into your account quickly.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Authentication Not Working?</h3>
+          <p>Resolve two-factor authentication errors and secure your account access.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Missing Transactions</h3>
+          <p>Check on delayed deposits or withdrawals and learn what to do next.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Bank Linking Issues</h3>
+          <p>Follow easy steps to connect your financial institution without errors.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Unusual Account Activity</h3>
+          <p>Identify and report unexpected changes or security threats in your account.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Buying & Selling Crypto</h3>
+          <p>Get tips on trading digital currencies using our platform's features.</p>
+      </div>
+    </section> -->
+
+
+
+  </div>
+</main>
+
+<!--     <section class="call-now-below-section">
+  <a href="tel:+18775801428" class="call-now-btn">Talk to us: +1-866-450-7470</a>
+</section> -->
+
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      © 2025 
+      Coinbase
+       Help Center 
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

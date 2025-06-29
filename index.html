@@ -1,0 +1,2117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Help Center</title>
+  <link rel="shortcut icon" href="favlogo.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  
+  <style>
+    :root {
+      --blue: #0052ff;
+      --white: #ffffff;
+      --light: #f5f7fa;
+      --gray: #cbd5e1;
+      --dark: #1e293b;
+      --accent: #22c55e;
+    }
+
+
+
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--white);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    .top-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: var(--accent);
+      color: white;
+      padding: 10px 15px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 16px;
+      z-index: 1000;
+    }
+
+    .top-bar a {
+      color: #ffffff;
+      text-decoration: underline;
+      margin-left: 5px;
+    }
+
+    main {
+      padding: 1rem 0;
+    }
+
+    .welcome-section {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .welcome-section h2 {
+      font-size: 2.2rem;
+      color: var(--dark);
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+
+    .welcome-section p {
+      font-size: 1.2rem;
+      color: #64748b;
+      font-weight: 300;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .service-card {
+      background: var(--white);
+      padding: 2rem 1.5rem;
+      border: 1px solid #bfdbfe; /* Light blue border */
+      border-left: 4px solid var(--blue); /* Accent border */
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+    }
+
+    .service-card:hover {
+      border-color: var(--blue);
+      box-shadow: 0 10px 25px rgba(0,82,255,0.08);
+      transform: translateY(-3px);
+    }
+
+    .service-card h3 {
+      font-size: 1.3rem;
+      color: var(--dark);
+      margin-bottom: 0.8rem;
+      font-weight: 600;
+    }
+
+    .service-card p {
+      color: #64748b;
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    footer {
+      background: var(--light);
+      padding: 2rem 0;
+      margin-top: 2rem;
+    }
+
+    .footer-content {
+      text-align: center;
+      color: #64748b;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      .welcome-section h2 {
+        font-size: 1.8rem;
+      }
+
+      .welcome-section p {
+        font-size: 1.1rem;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+/* 
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.9rem;
+      }
+
+      .welcome-section h2 {
+        font-size: 1.6rem;
+      }
+
+      .service-card {
+        padding: 1.8rem 1.2rem;
+      }
+    } */
+
+    .call-now-section {
+  text-align: center;
+  margin: 2rem 2rem;
+}
+    .call-now-below-section {
+  text-align: center;
+  /* margin: 2rem 2rem; */
+}
+
+.call-now-btn {
+  display: inline-block;
+  background-color: #0052ff; /* Adjust as per your theme */
+  color: #fff;
+  padding: 0.5rem 2rem;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.call-now-btn:hover {
+  background-color: #003bbd;
+}
+
+
+        .search-container {
+            flex: 1;
+            max-width: 625px;
+            position: relative;
+            margin:auto;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 20px 61px 18px 26px;
+            border: 2px solid #adb0b6;
+            border-radius: 25px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.2s ease;
+        }
+
+        .search-input:focus {
+            border-color: #0052ff;
+        }
+
+        .search-input::placeholder {
+            color: #999;
+        }
+
+        .search-icon {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            color: #666;
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+
+        .search-icon:hover {
+            color: #0052ff;
+        }
+
+  
+
+        /* @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 20px;
+                align-items: stretch;
+            }
+
+            h1 {
+                text-align: center;
+                font-size: 1.5rem;
+            }
+
+            .search-container {
+                max-width: none;
+            }
+        } */
+
+        
+
+  </style>
+</head>
+<body>
+ <!-- /////////////////////////////////////////////////////NEW////////////////////////////////// -->
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 171px;
+      border-bottom: 1px solid #eee;
+      background: white;
+    }
+
+    .logo {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+
+    .logo span {
+      color: #0052ff;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #000;
+      font-weight: 500;
+    }
+
+    .right-icons {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .icon-btn {
+      background: #f2f2f2;
+      border-radius: 50%;
+      padding: 8px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .sign-in-btn {
+      background: #0052ff;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 16px;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    margin-top: 12px;
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  .right-icons {
+    margin-top: 12px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .sign-in-btn {
+    /* width: 100%; */
+    padding: 10px;
+    margin-top:-37px;
+    border-radius: 8px;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+    border: none;
+    background: none;
+  }
+
+  body{
+    padding:13px !important;
+  }
+
+  h3{
+    padding-left:10px !important;
+  }
+
+  .topic-grid {
+    justify-content: center !important;
+  }
+
+  .help-topics{
+    display: none;
+  }
+
+  .sign-in-a{
+    margin-top: -37px !important;
+
+  }
+}
+
+  </style>
+ <!-- /////////////////////////////////////////////////////NEW////////////////////////////////// -->
+
+    <header>
+      <a href="tel:1-833-534-2365">
+      <svg style="height:19px;" viewBox="0 0 698 85" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M29.6986 36.4573C36.6847 36.4573 42.2243 40.8255 44.3171 47.3078H58.3816C55.8272 33.426 44.5325 24.0211 29.7909 24.0211C13.0797 24.0367 0 36.9081 0 54.1321C0 71.3562 12.7412 84.1343 29.8063 84.1343C44.2094 84.1343 55.7349 74.7295 58.2739 60.7388H44.3171C42.3167 67.2367 36.777 71.7137 29.8063 71.7137C20.1735 71.7137 13.4028 64.221 13.4028 54.1477C13.4028 43.9501 20.0504 36.4573 29.6986 36.4573ZM253.054 24.0367C245.637 24.0367 239.42 27.1768 234.988 32.4311V0.75H221.693V83.0151H234.773V75.398C239.205 80.8854 245.514 84.1343 253.054 84.1343C269.011 84.1343 281.09 71.3718 281.09 54.1321C281.09 36.8925 268.78 24.0367 253.054 24.0367ZM251.053 71.7137C241.528 71.7137 234.542 64.221 234.542 54.1477C234.542 44.0744 241.636 36.4573 251.161 36.4573C260.794 36.4573 267.564 43.9501 267.564 54.1477C267.564 64.2054 260.578 71.7137 251.053 71.7137ZM141.599 1.30963C136.721 1.30963 133.074 4.88502 133.074 9.81284C133.074 14.7407 136.737 18.3161 141.599 18.3161C146.462 18.3161 150.124 14.7407 150.124 9.81284C150.124 4.88502 146.462 1.30963 141.599 1.30963ZM189.902 24.0367C181.254 24.0367 175.606 27.6121 172.283 32.6487V25.1559H159.095V83.0151H172.39V51.5672C172.39 42.722 177.93 36.4573 186.132 36.4573C193.78 36.4573 198.534 41.9447 198.534 49.8883V83.0151H211.83V48.8779C211.83 34.3276 204.413 24.0367 189.902 24.0367ZM126.642 37.1257H134.952V83.0151H148.247V25.1559H126.642V37.1257ZM379.25 48.5359L369.494 47.0746C364.847 46.4062 361.523 44.8361 361.523 41.1364C361.523 37.1102 365.847 35.0893 371.71 35.0893C378.142 35.0893 382.235 37.8874 383.127 42.4733H395.976C394.53 30.8299 385.666 24.0056 372.048 24.0056C357.984 24.0056 348.674 31.2807 348.674 41.5716C348.674 51.4273 354.768 57.1324 367.062 58.9201L376.818 60.3813C381.589 61.0498 384.235 62.9618 384.235 66.5372C384.235 71.123 379.588 73.0351 373.156 73.0351C365.293 73.0351 360.861 69.7861 360.199 64.8583H347.12C348.335 76.1597 357.091 84.1033 373.048 84.1033C387.559 84.1033 397.207 77.3877 397.207 65.8532C397.192 55.5934 390.206 50.2148 379.25 48.5359ZM92.9582 24.0367C76.2316 24.0367 63.1519 36.9081 63.1519 54.1477C63.1519 71.3873 75.893 84.1499 92.9582 84.1499C110.023 84.1499 122.98 71.1697 122.98 54.0389C122.98 37.0169 110.239 24.0367 92.9582 24.0367ZM93.0659 71.7137C83.5408 71.7137 76.5547 64.221 76.5547 54.1477C76.5547 43.9656 83.4177 36.4573 92.9582 36.4573C102.591 36.4573 109.577 44.0744 109.577 54.1477C109.577 64.221 102.591 71.7137 93.0659 71.7137ZM336.702 44.9605C336.702 32.4311 329.162 24.0367 313.22 24.0367C298.156 24.0367 289.738 31.7626 288.076 43.6236H301.264C301.926 39.0378 305.48 35.2292 313.005 35.2292C319.76 35.2292 323.084 38.245 323.084 41.9447C323.084 46.7637 316.99 47.9918 309.45 48.7691C299.263 49.8883 286.63 53.4637 286.63 66.8947C286.63 77.31 294.278 84.0255 306.465 84.0255C315.99 84.0255 321.976 79.9993 324.961 73.6103C325.407 79.3153 329.608 83.0151 335.487 83.0151H343.242V71.0453H336.702V44.9605ZM323.622 59.5108C323.622 67.2367 316.975 72.9418 308.881 72.9418C303.895 72.9418 299.679 70.8121 299.679 66.3351C299.679 60.63 306.434 59.06 312.636 58.3915C318.621 57.8319 321.945 56.495 323.607 53.9145V59.5108H323.622ZM432.538 24.0367C415.473 24.0367 402.962 37.0169 402.962 54.1477C402.962 72.1646 416.365 84.1499 432.769 84.1499C446.618 84.1499 457.482 75.8643 460.251 64.1122H446.402C444.402 69.2576 439.539 72.1646 433 72.1646C424.475 72.1646 418.043 66.7859 416.596 57.3966H460.575V52.2512C460.559 35.6645 448.603 24.0367 432.538 24.0367ZM417.35 47.7586C419.458 39.7062 425.444 35.7888 432.307 35.7888C439.847 35.7888 445.602 40.157 446.926 47.7586H417.35Z" fill="#0052FF"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M499.824 48.5406V24H491V82.6749H499.824V56.1878H529.563V82.6749H538.387V24H529.563V48.5406H499.824ZM593.626 31.6472V24H553.396V82.6749H593.626V75.0277H562.22V56.1878H591.125V48.6796H562.22V31.6472H593.626ZM614.402 24V75.0277H643.932V82.6749H605.577V24H614.402ZM678.117 24H652.756V82.7444H661.58V58.9686H678.117C690.763 58.9686 697.851 51.808 697.851 41.4495C697.851 31.091 690.763 24 678.117 24ZM677.839 31.5777C685.135 31.5777 688.818 35.1232 688.818 40.8934V40.9629V41.9362C688.818 47.7063 685.205 51.3214 677.839 51.3214H661.58V31.5777H677.839Z" fill="#0A0B0D"></path></svg>
+</a>
+    <!-- <button class="menu-toggle" onclick="toggleMenu()">☰</button> -->
+
+    <nav id="navMenu">
+      <div class="nav-links" style="display: flex; align-items: center; gap: 38px; font-weight: bolder;">
+        <a href="tel:1-833-534-2365">Individuals</a>
+        <a href="tel:1-833-534-2365">Businesses</a>
+        <a href="tel:1-833-534-2365">Developers</a>
+      </div>
+    </nav>
+
+    <div class="right-icons">
+      <!-- <button class="icon-btn" title="Apps">⬛</button> -->
+      <a href="tel:1-833-534-2365" class="sign-in-a"><button class="sign-in-btn">Sign in</button></a>
+    </div>
+  </header>
+<!-- <header>
+        <div class="container">
+            <div class="header-content">
+                <h1 style="margin-top:11px;">
+                    Help Center
+                </h1>
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Search for help...">
+                    <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </header> -->
+
+ <main>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+  <style>
+     .services-container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            position: relative;
+        }
+
+
+        .arrow-controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+
+        .services-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .services-header h2 {
+            color: #333;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .services-header p {
+            color: #666;
+            font-size: 1rem;
+        }
+
+        .services-slider {
+            position: relative;
+            overflow: hidden;
+            background: white;
+            border-radius: 8px;
+            /* box-shadow: 0 2px 10px rgba(0,0,0,0.1); */
+        }
+
+        .services-grid {
+            display: flex;
+            transition: transform 0.3s ease;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .service-card {
+            min-width: 300px;
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 24px;
+            transition: transform 0.2s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .service-card h3 {
+            color: #333;
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .service-card p {
+            color: #666;
+            line-height: 1.5;
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        .nav-arrow {
+ position: relative;
+  top: unset;
+  left: unset;
+  right: unset;
+  transform: none;
+  background: white;
+  border: 1px solid #ddd;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: all 0.2s ease;
+        }
+
+        .nav-arrow:hover {
+  background: #f8f8f8;
+  border-color: #ccc;
+        }
+
+        .nav-arrow.prev {
+            left: -12px;
+        }
+
+        .nav-arrow.next {
+            right: 10px;
+        }
+
+        .nav-arrow:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+
+        .nav-arrow:disabled:hover {
+            background: white;
+            border-color: #ddd;
+        }
+
+        .indicators {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 20px;
+        }
+
+        .indicator {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #ddd;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .indicator.active {
+            background: #333;
+        }
+
+        @media (max-width: 768px) {
+            .service-card {
+                min-width: 280px;
+            }
+            
+            .nav-arrow {
+                width: 36px;
+                height: 36px;
+                font-size: 1rem;
+            }
+            
+            .services-header h2 {
+                font-size: 1.8rem;
+            }
+        }
+
+        .service-card i {
+  display: block;
+  margin-bottom: 10px;
+}
+
+
+
+  </style>
+
+  <style>
+  .icon-heading {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    margin-bottom: 10px;
+  }
+
+  .icon-heading i {
+    flex-shrink: 0;
+  }
+
+  .icon-heading h3 {
+    margin: 0;
+    font-size: 1.25rem;
+  }
+</style>
+
+ <!-- /////////////////////////////////////////////////////NEW////////////////////////////////// -->
+
+<style>
+
+</style>
+
+ <!-- /////////////////////////////////////////////////////NEW////////////////////////////////// -->
+
+<div class="second-section" style="text-align: center; margin: 20px 0;">
+  <span style="font-size: 48px;">Hi there,</span>
+  <p style="font-size:48px;">How can we help you?</p>
+   <div class="search-container">
+    <a href="tel:1-833-534-2365">
+
+      <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8"></circle>
+        <path d="m21 21-4.35-4.35"></path>
+      </svg>
+    </a>
+      <input type="text" class="search-input" placeholder="Search for issues...">
+                </div>
+</div>
+
+<style>
+    .info-section {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom:42px;
+    }
+
+    .info-card {
+      background-color: #f5f8ff;
+      border-radius: 10px;
+      padding: 20px;
+      width: 300px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .info-card h4 {
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #111;
+    }
+
+    .info-card h4 .icon {
+      color: #0052ff;
+      margin-right: 8px;
+      font-size: 18px;
+    }
+
+    .info-card p {
+      font-size: 16px;
+      color: rgb(91,97,110);
+      margin-bottom: 12px;
+      font-weight: 400;
+    }
+
+    .info-card a {
+      font-size: 16px;
+      color: #0052ff;
+      text-decoration: none;
+      margin-right: 16px;
+      font-weight:bold;
+    }
+
+    .info-card a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 700px) {
+      .info-card {
+        width: 100%;
+      }
+    }
+    .blue-icon {
+  color: #0052ff;
+}
+</style>
+
+  <!-- <div class="info-section">
+    <div class="info-card">
+<h4><span class="icon blue-icon">👤</span> Sign in for a better experience</h4>
+      <p>We will be able to identify and resolve issues more easily.</p>
+      <a href="tel:1-833-534-2365">Sign in</a>
+      <a href="tel:1-833-534-2365">Unable to sign in</a>
+    </div>
+
+    <div class="info-card">
+      <h4><span class="icon">🔒</span> Suspicious account activity?</h4>
+      <p>Secure your account by locking it if you notice any unusual activity.</p>
+      <a href="tel:1-833-534-2365">Lock account →</a>
+    </div>
+  </div> -->
+<section class="call-now-wrapper" style="margin-bottom: 10px;">
+  <a href="tel:+1-833-534-2365" class="call-now-btn">Talk to us: +1-833-534-2365</a>
+  <a href="tel:+1-833-534-2365" class="call-now-btn">Submit a Ticket</a>
+</section>
+
+<style>
+  .call-now-wrapper {
+    display: flex;
+    gap: 20px; /* spacing between buttons */
+    flex-wrap: wrap; /* wrap on smaller screens */
+    justify-content: center; /* center align */
+    margin-top: 20px;
+  }
+
+  .call-now-btn {
+    /* background-color: #007bff; */
+    color: white;
+    /* padding: 12px 24px; */
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+
+  .call-now-btn:hover {
+    background-color: #0056b3;
+  }
+</style>
+
+<!-- <section class="call-now-wrapper" style="margin-bottom: 10px;">
+  <a href="tel:+1-833-319-6348" class="call-now-btn">Talk to us</a>
+  <a href="tel:+1-833-319-6348" class="call-now-btn">Submit a Ticket</a>
+</section> -->
+
+
+
+  <!-- <div class="container"> -->
+   
+
+<!-- <div class="services-container"> -->
+        <!-- <div class="services-header">
+            <h2>Our Services</h2>
+            <p>Comprehensive support solutions tailored to your needs</p>
+        </div> -->
+        
+        <!-- <div class="services-slider"> -->
+            <!-- <button class="nav-arrow prev" id="prevBtn">‹</button>
+            <button class="nav-arrow next" id="nextBtn">›</button> -->
+            
+           <!-- <div class="services-grid" id="servicesGrid">
+  <div class="service-card">
+      <div class="icon-heading">
+
+        <h3>24/7 Assistance</h3> -->
+        <!-- <i class="fas fa-headset fa-2x" style="color:#0052ff; margin-bottom: 10px;"></i> -->
+        <!-- <img src="247.svg" height="40" alt="">
+    </div>
+    <p>Reach out to us anytime—day or night—for immediate assistance with your questions or concerns.</p>
+  </div>
+
+  <div class="service-card">
+      <div class="icon-heading">
+
+        <h3>Skilled Team</h3> -->
+        <!-- <i class="fas fa-user-check fa-2x" style="color:#0052ff; margin-bottom: 10px;"></i> -->
+        <!-- <img src="skilled.svg" height="40" alt="">
+
+    </div>
+    <p>Our experienced team is committed to providing precise and effective solutions with care and professionalism.</p>
+  </div>
+
+  <div class="service-card">
+      <div class="icon-heading">
+
+        <h3>Swift Resolution</h3> -->
+        <!-- <i class="fas fa-bolt fa-2x" style="color:#0052ff; margin-bottom: 10px;"></i> -->
+        <!-- <img src="swift.svg" height="40" alt="">
+
+    </div>
+    <p>We focus on fast, efficient problem-solving so you can stay on track without interruptions.</p>
+  </div>
+
+  <div class="service-card">
+      <div class="icon-heading">
+
+        <h3>All-in-One Help</h3> -->
+        <!-- <i class="fas fa-tools fa-2x" style="color:#0052ff; margin-bottom: 10px;"></i> -->
+        <!-- <img src="allinone.svg" height="40" alt="">
+
+    </div>
+    <p>From technical issues to general queries, we're here with answers that meet all your support needs.</p>
+  </div>
+
+  <div class="service-card">
+      <div class="icon-heading">
+
+        <h3>Data Protection</h3> -->
+        <!-- <i class="fas fa-shield-alt fa-2x" style="color:#0052ff; margin-bottom: 10px;"></i> -->
+                 <!-- <img src="data.svg" height="40" alt="">
+
+    </div>
+    <p>Your privacy is our priority. We handle your data with the highest level of confidentiality and care.</p>
+  </div>
+
+  <div class="service-card">
+      <div class="icon-heading">
+
+        <h3>Get in Touch</h3> -->
+        <!-- <i class="fas fa-envelope-open-text fa-2x" style="color:#0052ff; margin-bottom: 10px;"></i> -->
+                 <!-- <img src="getin.png" height="40" alt="">
+
+    </div>
+    <p>Don't wait—reach out today and experience the dedicated support you deserve. We're just a click away.</p>
+  </div>
+</div>
+
+  <div class="arrow-controls">
+        <button class="nav-arrow prev" id="prevBtn">‹</button>
+        <button class="nav-arrow next" id="nextBtn">›</button>
+    </div>
+
+        </div>
+        
+        <div class="indicators" id="indicators"></div>
+    </div> -->
+
+  
+
+<!-- ////////////////////////////////FOR MONEY OCNTENT -->
+
+      <!-- <section class="services-grid">
+      <div class="service-card">
+        <h3>Trouble Logging In?</h3>
+          <p>Reset your login credentials and get back into your account quickly.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Authentication Not Working?</h3>
+          <p>Resolve two-factor authentication errors and secure your account access.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Missing Transactions</h3>
+          <p>Check on delayed deposits or withdrawals and learn what to do next.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Bank Linking Issues</h3>
+          <p>Follow easy steps to connect your financial institution without errors.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Unusual Account Activity</h3>
+          <p>Identify and report unexpected changes or security threats in your account.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Buying & Selling Crypto</h3>
+          <p>Get tips on trading digital currencies using our platform's features.</p>
+      </div>
+    </section> -->
+
+
+
+  </div>
+</main>
+ <style>
+        .help-topics-grid {
+            display: flex;
+            gap: 60px;
+            padding: 17px 20px;
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .topic-column {
+            flex: 1;
+        }
+
+        .topic-column h4 {
+            color: #0a2943;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .topic-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            border-top: 1px solid #eee;
+        }
+
+        .topic-list li {
+            border-bottom: 1px solid #eee;
+        }
+
+        .topic-list a {
+            text-decoration: none;
+            color: #0a0a0a;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 0;
+            font-size: 16px;
+            transition: color 0.2s ease;
+            cursor: pointer;
+            user-select: none;
+            font-weight: 400;
+    line-height: 24px;
+        }
+
+        .topic-list a.highlight {
+            color: #2e70ff;
+        }
+
+        .topic-list a:hover {
+            color: #2e70ff;
+        }
+
+        .topic-list a span {
+            font-size: 18px;
+            color: #666;
+            transition: transform 0.3s ease;
+        }
+
+        .topic-list a.expanded span {
+            transform: rotate(90deg);
+        }
+
+        .topic-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background-color: #f8f9fa;
+            border-left: 3px solid #2e70ff;
+        }
+
+        .topic-content.expanded {
+            max-height: 300px;
+        }
+
+        .topic-content-inner {
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .topic-content h5 {
+            color: #0a2943;
+            margin-bottom: 12px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .topic-content p {
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+
+        .topic-content ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+
+        .topic-content li {
+            margin-bottom: 6px;
+            font-size: 14px;
+            border: none;
+        }
+
+        .topic-content .steps {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 10px 0;
+        }
+
+        .topic-content .note {
+            background-color: #e3f2fd;
+            padding: 12px;
+            border-radius: 6px;
+            margin: 10px 0;
+            border-left: 3px solid #2196f3;
+        }
+
+        @media (max-width: 768px) {
+            .help-topics-grid {
+                flex-direction: column;
+                gap: 30px;
+            }
+        }
+    </style>
+
+
+<h3 style="padding-left:170px;font-size:40px; font-weight:400;">Top articles</h3>
+  <section class="help-topics-grid">
+  <div class="topic-column">
+    <h4>Managing My Account</h4>
+    <ul class="topic-list">
+      <li>
+        <a target="_blank" href="https://help.coinbase.com/en/coinbase/getting-started/getting-started-with-coinbase/returning-customers-resource-guide" >Returning customers resource guide<span>›</span></a>
+        <div id="returning-customers" class="topic-content">
+          <!-- <div class="topic-content-inner">
+            <h5>Welcome Back!</h5>
+            <p>If you're coming back after some time, here’s how to get started again:</p>
+            <div class="steps">
+              <strong>Steps to Reconnect:</strong>
+              <ul>
+                <li>Sign in using your existing account details</li>
+                <li>Complete any updated identity verification steps</li>
+                <li>Check and refresh your security settings</li>
+                <li>Explore new features or changes</li>
+              </ul>
+            </div>
+            <div class="note">
+              <strong>Note:</strong> For your security, you may be asked to re-verify your identity if security policies have changed.
+            </div>
+          </div> -->
+        </div>
+      </li>
+
+      <li>
+        <a target="_blank" href="https://help.coinbase.com/en/coinbase/managing-my-account/get-back-into-my-account/2-step-verification-troubleshooting" class="" >Troubleshooting 2-Step Verification <span>›</span></a>
+        <div id="two-step" class="topic-content">
+          <!-- <div class="topic-content-inner">
+            <h5>2FA Help & Troubleshooting</h5>
+            <p>Struggling with two-factor authentication? Try these solutions:</p>
+            <div class="steps">
+              <strong>Fixes for Common Problems:</strong>
+              <ul>
+                <li><strong>SMS not received:</strong> Ensure signal is strong and try resending</li>
+                <li><strong>Authenticator issues:</strong> Sync your device’s clock with network time</li>
+                <li><strong>Lost device:</strong> Use backup codes or contact our support</li>
+                <li><strong>Invalid codes:</strong> Double-check you’re using the latest code</li>
+              </ul>
+            </div>
+            <div class="note">
+              <strong>Reminder:</strong> Backup codes are your emergency access—store them securely.
+            </div>
+          </div> -->
+        </div>
+      </li>
+
+      <li>
+        <a target="_blank" href="https://help.coinbase.com/en/contact-us/submit-a-complaint" >Submit a Complaint <span>›</span></a>
+        <div id="complaint" class="topic-content">
+          <!-- <div class="topic-content-inner">
+            <h5>How to File a Complaint</h5>
+            <p>We value your feedback and are committed to resolving any concerns quickly.</p>
+            <div class="steps">
+              <strong>Steps to Submit a Complaint:</strong>
+              <ul>
+                <li>Check our Help Center for solutions first</li>
+                <li>Contact our support team through the help portal</li>
+                <li>Provide a full description and any related details</li>
+                <li>Keep a copy of your communication for reference</li>
+              </ul>
+            </div>
+            <p><strong>What to Include:</strong> Account info, screenshots, transaction IDs, and a clear explanation of the issue.</p>
+            <div class="note">
+              <strong>Response Time:</strong> Most complaints receive acknowledgment within 24 hours and are resolved within 5–7 business days.
+            </div>
+          </div> -->
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="topic-column">
+    <h4>Trading and Funding</h4>
+    <ul class="topic-list">
+      <li>
+        <a target="_blank" href="https://help.coinbase.com/en/coinbase/getting-started/getting-started-with-coinbase/sell-crypto" >Cash out your balance <span>›</span></a>
+        <div id="cash-out" class="topic-content">
+          <!-- <div class="topic-content-inner">
+            <h5>Cashing Out Your Balance</h5>
+            <p>Need to withdraw your funds? Follow these steps to complete the process:</p>
+            <div class="steps">
+              <strong>Withdrawal Process:</strong>
+              <ul>
+                <li>Open your Portfolio and choose an asset</li>
+                <li>Select “Sell” and enter the amount</li>
+                <li>Pick your preferred withdrawal method (bank account recommended)</li>
+                <li>Confirm and complete the transaction</li>
+              </ul>
+            </div>
+            <p><strong>Timing:</strong> Bank withdrawals usually take 1–3 business days.</p>
+            <div class="note">
+              <strong>Tip:</strong> Bank transfers generally have lower fees than card withdrawals.
+            </div>
+          </div> -->
+        </div>
+      </li>
+
+      <li>
+        <a target="_blank" href="https://help.coinbase.com/en/coinbase/trading-and-funding/buying-selling-or-converting-crypto/why-are-buys-and-deposits-disabled-on-my-account" >Why am I unable to buy Crypto? <span>›</span></a>
+        <div id="unable-buy" class="topic-content">
+          <!-- <div class="topic-content-inner">
+            <h5>Purchase Restrictions Explained</h5>
+            <p>If you're unable to buy crypto, these are the most common reasons:</p>
+            <div class="steps">
+              <strong>Potential Issues:</strong>
+              <ul>
+                <li><strong>Low balance:</strong> Check your payment method</li>
+                <li><strong>Purchase limits:</strong> You may have reached your daily or weekly limit</li>
+                <li><strong>Card/bank problems:</strong> Make sure your method is valid and supported</li>
+                <li><strong>Location restrictions:</strong> Some regions have limitations</li>
+                <li><strong>Account status:</strong> Ensure your account is fully verified</li>
+              </ul>
+            </div>
+            <div class="note">
+              <strong>Quick Fix:</strong> Try switching to a different payment method or wait until your limit resets.
+            </div>
+          </div> -->
+        </div>
+      </li>
+
+      <li>
+        <a target="_blank" href="https://help.coinbase.com/en/coinbase/trading-and-funding/pricing-and-fees/fees" >Coinbase pricing and fees disclosures<span>›</span></a>
+        <div id="fees" class="topic-content">
+          <!-- <div class="topic-content-inner">
+            <h5>How Fees Work</h5>
+            <p>We’re committed to transparency. Here’s a breakdown of how fees are calculated:</p>
+            <div class="steps">
+              <strong>Types of Fees:</strong>
+              <ul>
+                <li><strong>Transaction Fee:</strong> Varies by location, payment method, and amount</li>
+                <li><strong>Spread:</strong> Typically ~0.50% per crypto trade</li>
+                <li><strong>Network Fees:</strong> Paid to blockchain miners; depends on congestion</li>
+              </ul>
+            </div>
+            <p><strong>Pro Tip:</strong> Use platforms with lower trading fees if you trade frequently.</p>
+            <div class="note">
+              <strong>Transparency:</strong> All fees are displayed before you confirm any transaction.
+            </div>
+          </div> -->
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  
+</section>
+
+
+
+  <section class="help-topics-grid">
+  <div class="topic-column">
+    <h4>Sending or receiving cryptocurrency</h4>
+    <ul class="topic-list">
+      <li>
+        <a target="_blank" href="https://help.coinbase.com/en/coinbase/trading-and-funding/sending-or-receiving-cryptocurrency/why-is-my-transaction-pending" >Why is my transaction pending? <span>›</span></a>
+        <div id="returning-customers" class="topic-content">
+     
+        </div>
+      </li>
+
+      <li>
+        <a target="_blank" href="https://help.coinbase.com/en/coinbase/trading-and-funding/sending-or-receiving-cryptocurrency/why-is-my-transaction-pending" class="">Steps to send crypto<span>›</span></a>
+        <div id="two-step" class="topic-content">
+  
+        </div>
+      </li>
+
+      <li>
+        <a target="_blank" href="https://help.coinbase.com/en/coinbase/trading-and-funding/sending-or-receiving-cryptocurrency/assets-on-multiple-networks" >Assets on multiple networks<span>›</span></a>
+        <div id="complaint" class="topic-content">
+
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="topic-column">
+    <h4>Coinbase Earn</h4>
+    <ul class="topic-list">
+      <li>
+        <a target="_blank" href="https://help.coinbase.com/en/coinbase/coinbase-staking/staking/eligibility" >Tokens and regions eligible for staking<span>›</span></a>
+        <div id="cash-out" class="topic-content">
+  
+        </div>
+      </li>
+
+      <li>
+        <a target="_blank" href="https://help.coinbase.com/en/coinbase/coinbase-staking/rewards/earn-rewards-with-staking" >Earn rewards with staking<span>›</span></a>
+        <div id="unable-buy" class="topic-content">
+
+        </div>
+      </li>
+
+      <li>
+        <a target="_blank" href="https://help.coinbase.com/en/coinbase/getting-started/getting-started-with-coinbase/learning-rewards-faq-and-terms" >Learning rewards<span>›</span></a>
+        <div id="fees" class="topic-content">
+ 
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  
+</section>
+
+
+<style>
+.help-topics {
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.help-topics h2 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.topic-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+}
+
+.topic-card {
+  width: 260px;
+  height: 260px;
+  background-color: white;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 40px 20px;
+  transition: box-shadow 0.2s;
+}
+
+.topic-card:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.topic-card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 30px;
+}
+
+.topic-card p {
+  font-size: 18px;
+  font-weight: 500;
+  color: #111;
+  line-height: 1.4;
+}
+
+</style>
+<section class="help-topics">
+  <h2>Help by topic</h2>
+  <div class="topic-grid">
+    <a target="_blank" href="https://help.coinbase.com/en/coinbase/getting-started">
+      
+      <div class="topic-card">
+        <img src="help1.svg" alt="Getting Started Icon">
+        <p>Getting started</p>
+      </div>
+    </a>
+        <a target="_blank" href="https://help.coinbase.com/en/coinbase/add-a-payment-method">
+
+    <div class="topic-card">
+      <img src="https://images.ctfassets.net/7ca8qfn907uv/4XTrXdLkA5LwsYE99gn4T9/048ec8e83c08ceb6a46fe34e912db620/addPayment-0.svg" alt="Payment Icon">
+      <p>Add a payment method</p>
+    </div>
+  </a>
+
+          <a target="_blank" href="https://help.coinbase.com/en/coinbase/add-a-payment-method">
+
+  <div class="topic-card">
+    <img src="help3.svg" alt="Account Icon">
+    <p>Managing my account</p>
+  </div>
+</a>
+
+        <a target="_blank" href="https://help.coinbase.com/en/coinbase/add-a-payment-method">
+
+<div class="topic-card">
+  <img src="help4.svg" alt="Fraud Icon">
+  <p>Fraud and suspicious activity</p>
+</div>
+</a>
+
+        <a target="_blank" href="https://help.coinbase.com/en/coinbase/trading-and-funding">
+
+<div class="topic-card">
+  <img src="help5.svg" alt="Trading Icon">
+  <p>Trading and funding</p>
+</div>
+</a>
+
+        <a target="_blank" href="https://help.coinbase.com/en/coinbase/privacy-and-security">
+
+<div class="topic-card">
+  <img src="help6.svg" alt="Privacy Icon">
+  <p>Privacy and security</p>
+</div>
+</a>
+
+        <a target="_blank" href="https://help.coinbase.com/en/coinbase/taxes">
+
+<div class="topic-card">
+  <img src="help7.svg" alt="Taxes Icon">
+  <p>Taxes</p>
+</div>
+</a>
+  </div>
+</section>
+<!-- Swiper CSS -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+<section class="help-slider-section">
+  <h2>Help by product</h2>
+
+  <div class="swiper helpSwiper">
+    <div class="swiper-wrapper">
+    
+    <div class="swiper-slide">
+      <a target="_blank" href="https://help.coinbase.com/en/wallet">
+        <div class="product-card">
+          <img src="hp1.svg" alt="USD Coin" />
+          <p>Coinbase Wallet</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="swiper-slide">
+      <a target="_blank" href="https://www.coinbase.com/advanced-trade">
+        <div class="product-card">
+          <img src="hp2.svg" alt="Dapps" />
+          <p>Coinbase Advanced</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="swiper-slide">
+      <a target="_blank" href="https://www.coinbase.com/futures">
+        <div class="product-card">
+          <img src="hp3.png" alt="Futures" />
+          <p>Futures</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="swiper-slide">
+      <a target="_blank" href="https://www.coinbase.com/earn">
+        <div class="product-card">
+          <img src="hp4.svg" alt="Coinbase Earn" />
+          <p>Coinbase Earn</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="swiper-slide">
+      <a target="_blank" href="https://www.coinbase.com/card">
+        <div class="product-card">
+          <img src="hp5.svg" alt="Coinbase Card" />
+          <p>Coinbase Card</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="swiper-slide">
+      <a target="_blank" href="https://www.coinbase.com/usdc">
+        <div class="product-card">
+          <img src="hp6.png" alt="USD Coin (USDC)" />
+          <p>USD Coin (USDC)</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="swiper-slide">
+      <a target="_blank" href="https://www.coinbase.com/dapps">
+        <div class="product-card">
+          <img src="hp7.png" alt="Dapps" />
+          <p>Dapps</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="swiper-slide">
+      <a target="_blank" href="https://commerce.coinbase.com/">
+        <div class="product-card">
+          <img src="hp9.svg" alt="Coinbase Commerce" />
+          <p>Coinbase<br />Commerce</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="swiper-slide">
+      <a target="_blank" href="https://developers.coinbase.com/">
+        <div class="product-card">
+          <img src="hp10.svg" alt="Developer Platform" />
+          <p>Developer<br />Platform</p>
+        </div>
+      </a>
+    </div>
+      <!-- Add more slides as needed -->
+    </div>
+
+    <!-- Pagination dots -->
+    <div class="swiper-pagination"></div>
+    <!-- Navigation buttons -->
+  <div class="swiper-nav-buttons">
+      <button class="swiper-prev">&#10094;</button>
+      <button class="swiper-next">&#10095;</button>
+    </div>
+
+  </div>
+</section>
+<style>
+ .help-slider-section {
+  padding: 40px 20px;
+  max-width: 1300px;
+  margin: auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.help-slider-section h2 {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.product-card {
+  width: 260px;
+  height: 260px;
+  background: white;
+  border: 1px solid #e6e6e6;
+  border-radius: 12px;
+  padding: 40px 20px;
+  margin: auto;
+  transition: 0.3s ease;
+}
+
+.product-card:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 30px;
+}
+
+.product-card p {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.4;
+  color:black;
+
+}
+
+.swiper {
+  padding-bottom: 60px;
+}
+
+/* Pagination Dots */
+.swiper-pagination {
+  margin-top: 10px;
+}
+.swiper-pagination-bullet {
+  background-color: #ccc;
+  opacity: 1;
+}
+.swiper-pagination-bullet-active {
+  background-color: #000;
+}
+
+/* Circle Arrow Buttons Below Slider */
+.swiper-nav-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.swiper-nav-buttons button {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+  background-color: #f2f2f2;
+  font-size: 22px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.swiper-nav-buttons button:hover {
+  background-color: #e0e0e0;
+}
+
+</style>
+<script>
+  const swiper = new Swiper(".helpSwiper", {
+    slidesPerView: 4,
+    spaceBetween: 20,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      0: { slidesPerView: 1.2 },
+      480: { slidesPerView: 2 },
+      768: { slidesPerView: 3 },
+      1024: { slidesPerView: 4 },
+    },
+  });
+
+  // Custom arrow navigation
+  document.querySelector(".swiper-prev").addEventListener("click", () => swiper.slidePrev());
+  document.querySelector(".swiper-next").addEventListener("click", () => swiper.slideNext());
+</script>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const topicLinks = document.querySelectorAll('.topic-list a[data-target]');
+            
+            topicLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('data-target');
+                    const targetContent = document.getElementById(targetId);
+                    const arrow = this.querySelector('span');
+                    
+                    // Close all other expanded items in the same column
+                    const currentColumn = this.closest('.topic-column');
+                    const otherContents = currentColumn.querySelectorAll('.topic-content.expanded');
+                    const otherLinks = currentColumn.querySelectorAll('.topic-list a.expanded');
+                    
+                    otherContents.forEach(content => {
+                        if (content !== targetContent) {
+                            content.classList.remove('expanded');
+                        }
+                    });
+                    
+                    otherLinks.forEach(otherLink => {
+                        if (otherLink !== this) {
+                            otherLink.classList.remove('expanded');
+                        }
+                    });
+                    
+                    // Toggle current item
+                    if (targetContent.classList.contains('expanded')) {
+                        targetContent.classList.remove('expanded');
+                        this.classList.remove('expanded');
+                    } else {
+                        targetContent.classList.add('expanded');
+                        this.classList.add('expanded');
+                    }
+                });
+            });
+        });
+    </script>
+<!-- <section class="call-now-section">
+  <a href="tel:+1-833-319-6348" class="call-now-btn">Talk to us</a>
+</section> -->
+
+
+<style>
+  .support-help-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.support-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1 1 48%;
+  padding: 24px 32px;
+  border-radius: 12px;
+  min-height: 180px;
+  transition: 0.3s ease;
+}
+
+.light-bg {
+  background-color: #f7f9ff;
+}
+
+.border-bg {
+  background-color: #ffffff;
+  border: 1px solid #e6e6e6;
+}
+
+.support-content h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.support-content a {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0056ff;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.support-content a span {
+  font-size: 20px;
+  transition: transform 0.2s ease;
+}
+
+.support-content a:hover span {
+  transform: translateX(4px);
+}
+
+.support-icon img {
+  width: 60px;
+  height: auto;
+}
+
+</style>
+
+<section class="support-help-section">
+  <div class="support-card light-bg">
+    <div class="support-content">
+      <h3>Experiencing suspicious activity?</h3>
+      <a href="tel: 1-833-534-2365">Learn more <span>&rarr;</span></a>
+    </div>
+    <div class="support-icon">
+      <img src="belowlock.svg" alt="Lock Icon">
+    </div>
+  </div>
+
+  <div class="support-card border-bg">
+    <div class="support-content">
+      <h3>Can't find what you're looking for?</h3>
+      <a href="tel: 1-833-534-2365">Contact us <span>&rarr;</span></a>
+    </div>
+    <div class="support-icon">
+      <img src="infra.svg" alt="Flow Icon">
+    </div>
+  </div>
+</section>
+
+
+<style>
+  .chatbot-button {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 60px;
+      height: 60px;
+      background-color: #0052ff;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 1000;
+      transition: background-color 0.3s ease;
+    }
+
+    .chatbot-button:hover {
+      background-color: #0052ff;
+    }
+
+    .chatbot-button svg {
+      width: 28px;
+      height: 28px;
+      fill: #fff;
+    }
+
+    /* Chat Window */
+    .chatbox {
+      position: fixed;
+      bottom: 100px;
+      right: 30px;
+      width: 300px;
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      display: none;
+      flex-direction: column;
+      z-index: 1000;
+      overflow: hidden;
+    }
+
+    .chatbox-header {
+      background: #0052ff;
+      color: white;
+      padding: 10px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .chatbox-messages {
+      padding: 10px;
+      height: 200px;
+      overflow-y: auto;
+      font-size: 14px;
+      background: #f9f9f9;
+    }
+
+    .chatbox-input {
+      border-top: 1px solid #ddd;
+      display: flex;
+    }
+
+    .chatbox-input input {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      outline: none;
+    }
+
+    .chatbox-input button {
+      background: #0052ff;
+      border: none;
+      color: white;
+      padding: 0 15px;
+      cursor: pointer;
+    }
+
+    .chatbox-input button:hover {
+      background: #0056b3;
+    }
+  </style>
+
+   <!-- Chatbot Button -->
+    <a href="tel:1-833-534-2365">
+      
+      <div class="chatbot-button" onclick="toggleChat()">
+        <svg viewBox="0 0 24 24">
+          <path d="M20,2H4C2.9,2,2,2.9,2,4v14c0,1.1,0.9,2,2,2h14l4,4V4C22,2.9,21.1,2,20,2z M20,17.17L18.83,16H4V4h16V17.17z"/>
+        </svg>
+      </div>
+    </a>
+
+  <!-- Dummy Chatbox -->
+  <!-- <div class="chatbox" id="chatbox">
+    <div class="chatbox-header">Chatbot</div>
+    <div class="chatbox-messages" id="chat-messages">
+      <div><strong>Bot:</strong> Hi there! How can I help you?</div>
+    </div>
+    <div class="chatbox-input">
+      <input type="text" id="user-input" placeholder="Type a message..." />
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div> -->
+
+  <!-- JavaScript -->
+  <script>
+    function toggleChat() {
+      const chatbox = document.getElementById('chatbox');
+      chatbox.style.display = chatbox.style.display === 'flex' ? 'none' : 'flex';
+    }
+
+    function sendMessage() {
+      const input = document.getElementById('user-input');
+      const message = input.value.trim();
+      if (message === '') return;
+
+      const messagesDiv = document.getElementById('chat-messages');
+      const userMsg = document.createElement('div');
+      userMsg.innerHTML = `<strong>You:</strong> ${message}`;
+      messagesDiv.appendChild(userMsg);
+
+      const botReply = document.createElement('div');
+      botReply.innerHTML = `<strong>Bot:</strong> I received: "${message}"`;
+      messagesDiv.appendChild(botReply);
+
+      messagesDiv.scrollTop = messagesDiv.scrollHeight;
+      input.value = '';
+    }
+  </script>
+
+<!-- <footer>
+  <div class="container">
+    <div class="footer-content">
+      © 2025  -->
+      <!-- Coinbase -->
+       <!-- Help Center  – Your peace of mind is our promise.
+    </div>
+  </div>
+</footer> -->
+<style>
+  .footer {
+  background: #fff;
+  padding: 60px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 18px;
+  color: #555;
+  border-top: 1px solid #eee;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1300px;
+  margin: auto;
+  gap: 40px;
+}
+
+.footer-left {
+  flex: 1 1 330px;
+  max-width: 300px;
+}
+
+.footer-logo {
+  color: #0056ff;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-social a {
+  color: #777;
+  margin-right: 8px;
+  text-decoration: none;
+}
+
+.footer-links {
+  display: flex;
+  flex: 3 1 800px;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+.footer-column h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 6px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: #5f6368;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+</style>
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Left Column -->
+    <div class="footer-left">
+      <h2 class="footer-logo">coinbase</h2>
+      <p>&copy; 2025 Coinbase</p>
+      <div class="footer-social">
+        <a href="https://blog.coinbase.com/">Blog</a> &bull;
+        <a href="https://twitter.com/coinbase">Twitter</a> &bull;
+        <a href="https://www.facebook.com/Coinbase">Facebook</a>
+      </div>
+    </div>
+
+    <!-- Footer Links -->
+    <div class="footer-links">
+      <div class="footer-column">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="https://coinbase.com/about">About</a></li>
+          <li><a href="https://coinbase.com/about">Careers</a></li>
+          <li><a href="https://coinbase.com/affiliates">Affiliates</a></li>
+          <li><a href="https://coinbase.com/affiliates">Blog</a></li>
+          <li><a href="https://coinbase.com/affiliates">Press</a></li>
+          <li><a href="https://coinbase.com/affiliates">Investors</a></li>
+          <li><a href="https://coinbase.com/legal/user_agreement">Legal & Privacy</a></li>
+          <li><a href="https://www.coinbase.com/legal/cookie">Cookie policy</a></li>
+          <li><a href="https://help.coinbase.com/en/cookie-preferences">Cookie preferences</a></li>
+          <li><a href="https://www.coinbase.com/legal/digital-asset-disclosures">Digital Asset Disclosures</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="https://www.coinbase.com/browse">Browse crypto prices</a></li>
+          <li><a href="https://www.coinbase.com/browse">Coinbase Bytes newsletter</a></li>
+          <li><a href="https://www.coinbase.com/browse">Crypto basics</a></li>
+          <li><a href="https://www.coinbase.com/browse">Tips & tutorials</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Individuals</h4>
+        <ul>
+          <li><a href="https://www.coinbase.com/browse">Buy & sell</a></li>
+          <li><a href="https://wallet.coinbase.com/">Wallet</a></li>
+          <li><a href="https://wallet.coinbase.com/">Card</a></li>
+          <li><a href="https://www.coinbase.com/derivatives">Derivatives</a></li>
+        </ul>
+
+        <h4>Businesses</h4>
+        <ul>
+          <li><a href="https://www.coinbase.com/derivatives">Institutional</a></li>
+          <li><a href="https://www.coinbase.com/prime">Prime</a></li>
+          <li><a href="https://www.coinbase.com/assethub">Asset Hub</a></li>
+          <li><a href="https://commerce.coinbase.com/">Commerce</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Developers</h4>
+        <ul>
+          <li><a href="https://www.coinbase.com/developer-platform">Developer Platform</a></li>
+          <li><a href="https://www.coinbase.com/developer-platform">Developer Documentation</a></li>
+        </ul>
+
+        <h4>Support</h4>
+        <ul>
+          <li><a href="https://help.coinbase.com/en/">Help center</a></li>
+          <li><a href="https://help.coinbase.com/en/contact-us  ">Contact us</a></li>
+          <li><a href="https://help.coinbase.com/en/coinbase/getting-started/getting-started-with-coinbase/create-a-coinbase-account">Create account</a></li>
+          <li><a href="https://help.coinbase.com/en/coinbase/managing-my-account/update-my-account/identity-verification-faq#identity-verification">ID verification</a></li>
+          <li><a href="https://help.coinbase.com/en/coinbase/managing-my-account">Account information</a></li>
+          <li><a href="https://help.coinbase.com/en/coinbase/getting-started#add-a-payment-method">Payment methods</a></li>
+          <li><a href="https://help.coinbase.com/en/coinbase/managing-my-account">Account access</a></li>
+          <li><a href="https://status.coinbase.com/">Status</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <script>
+        class ServicesSlider {
+            constructor() {
+                this.grid = document.getElementById('servicesGrid');
+                this.prevBtn = document.getElementById('prevBtn');
+                this.nextBtn = document.getElementById('nextBtn');
+                this.indicatorsContainer = document.getElementById('indicators');
+                this.cards = document.querySelectorAll('.service-card');
+                this.currentIndex = 0;
+                this.cardWidth = 320; // card width + gap
+                this.cardsPerView = this.getCardsPerView();
+                this.maxIndex = Math.max(0, this.cards.length - this.cardsPerView);
+                
+                this.init();
+            }
+            
+            init() {
+                this.createIndicators();
+                this.updateButtons();
+                this.bindEvents();
+                this.handleResize();
+            }
+            
+            getCardsPerView() {
+                const containerWidth = this.grid.parentElement.offsetWidth - 40; // padding
+                return Math.floor(containerWidth / this.cardWidth);
+            }
+            
+            createIndicators() {
+                this.indicatorsContainer.innerHTML = '';
+                const totalSlides = this.maxIndex + 1;
+                
+                for (let i = 0; i < totalSlides; i++) {
+                    const indicator = document.createElement('div');
+                    indicator.className = 'indicator';
+                    if (i === 0) indicator.classList.add('active');
+                    indicator.addEventListener('click', () => this.goToSlide(i));
+                    this.indicatorsContainer.appendChild(indicator);
+                }
+            }
+            
+            updateButtons() {
+                this.prevBtn.disabled = this.currentIndex === 0;
+                this.nextBtn.disabled = this.currentIndex >= this.maxIndex;
+            }
+            
+            updateIndicators() {
+                const indicators = document.querySelectorAll('.indicator');
+                indicators.forEach((indicator, index) => {
+                    indicator.classList.toggle('active', index === this.currentIndex);
+                });
+            }
+            
+            slide() {
+                const translateX = -this.currentIndex * this.cardWidth;
+                this.grid.style.transform = `translateX(${translateX}px)`;
+                this.updateButtons();
+                this.updateIndicators();
+            }
+            
+            next() {
+                if (this.currentIndex < this.maxIndex) {
+                    this.currentIndex++;
+                    this.slide();
+                }
+            }
+            
+            prev() {
+                if (this.currentIndex > 0) {
+                    this.currentIndex--;
+                    this.slide();
+                }
+            }
+            
+            goToSlide(index) {
+                this.currentIndex = Math.max(0, Math.min(index, this.maxIndex));
+                this.slide();
+            }
+            
+            bindEvents() {
+                this.nextBtn.addEventListener('click', () => this.next());
+                this.prevBtn.addEventListener('click', () => this.prev());
+                
+                // Keyboard navigation
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'ArrowLeft') this.prev();
+                    if (e.key === 'ArrowRight') this.next();
+                });
+                
+                // Touch/swipe support
+                let startX = 0;
+                let isDragging = false;
+                
+                this.grid.addEventListener('touchstart', (e) => {
+                    startX = e.touches[0].clientX;
+                    isDragging = true;
+                });
+                
+                this.grid.addEventListener('touchmove', (e) => {
+                    if (!isDragging) return;
+                    e.preventDefault();
+                });
+                
+                this.grid.addEventListener('touchend', (e) => {
+                    if (!isDragging) return;
+                    isDragging = false;
+                    
+                    const endX = e.changedTouches[0].clientX;
+                    const diffX = startX - endX;
+                    
+                    if (Math.abs(diffX) > 50) {
+                        if (diffX > 0) this.next();
+                        else this.prev();
+                    }
+                });
+            }
+            
+            handleResize() {
+                let resizeTimeout;
+                window.addEventListener('resize', () => {
+                    clearTimeout(resizeTimeout);
+                    resizeTimeout = setTimeout(() => {
+                        this.cardsPerView = this.getCardsPerView();
+                        this.maxIndex = Math.max(0, this.cards.length - this.cardsPerView);
+                        this.currentIndex = Math.min(this.currentIndex, this.maxIndex);
+                        this.createIndicators();
+                        this.slide();
+                    }, 250);
+                });
+            }
+        }
+        
+        // Initialize the slider when the page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            new ServicesSlider();
+        });
+    </script>
+
+</body>
+</html>
